@@ -1,0 +1,2 @@
+# Prosty program Kalkulatora
+Program pobiera dwie liczby z cmd a, b oraz pobiera operator od użytkownika. Następnie program na podstawie operatora wybiera jakie działanie będzie realizowane. W konsoli powinien się wyświetlić result.
