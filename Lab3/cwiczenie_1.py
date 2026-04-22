@@ -17,18 +17,24 @@ Czas: ~15 minut
 
 
 def celsius_na_fahrenheit(c):
-    # TODO: Uzupełnij
-    pass
+    return  c * 9/5 + 32
 
 
 def fahrenheit_na_celsius(f):
-    # TODO: Uzupełnij
-    pass
+    return (f - 32) * 5/9
 
 
 def przelicz_temperature(wartosc, z_jednostki):
-    # TODO: Uzupełnij (użyj dwóch powyższych funkcji)
-    pass
+    if z_jednostki == "C":
+        wynik = celsius_na_fahrenheit(wartosc)
+        docelowa = "F"
+    elif z_jednostki == "F":
+        wynik = fahrenheit_na_celsius(wartosc)
+        docelowa = "C"
+    else:
+        return None, "Nieznana jednostka"
+        
+    return wynik, docelowa
 
 
 # Testy:
