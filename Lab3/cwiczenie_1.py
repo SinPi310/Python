@@ -67,9 +67,32 @@ print()
 
 
 def statystyki(liczby):
-    # TODO: Uzupełnij (bez użycia min(), max(), sum())
-    pass
+    if not liczby:
+        return None
 
+    min_val = liczby[0]
+    max_val = liczby[0]
+    total_sum = 0
+    count = 0
+
+    for liczba in liczby:
+        if liczba < min_val:
+            min_val = liczba
+        if liczba > max_val:
+            max_val = liczba
+        
+        total_sum += liczba
+
+    avg = total_sum / len(liczby)
+        
+    return {
+        "min": min_val,
+        "max": max_val,
+        "suma": total_sum,
+        "srednia": avg,
+        "zakres": max_val - min_val,
+        "ilosc": len(liczby)
+    }
 
 print("=== Zadanie 1b: Statystyki listy ===")
 dane_testowe = [
@@ -102,8 +125,9 @@ print()
 
 
 def potega_n(n):
-    # TODO: Uzupełnij — zwróć wewnętrzną funkcję
-    pass
+    def wynik(a):
+        return a ** n
+    return wynik
 
 
 print("=== Zadanie 1c: Funkcja zwracająca funkcję ===")
