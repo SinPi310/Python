@@ -16,8 +16,9 @@ Czas: ~15 minut
 
 
 def formatuj_adres(ulica, numer, miasto, kod_pocztowy, kraj="Polska"):
-    # TODO: Uzupełnij
-    pass
+    if not ulica or not numer or not miasto :
+        return "Błąd: niekompletny adres"
+    return f"ul. {ulica} {numer}\n{kod_pocztowy} {miasto}\n{kraj}"
 
 
 print("=== Zadanie 2a: Formatowanie adresu ===")
